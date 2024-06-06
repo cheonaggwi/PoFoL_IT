@@ -13,13 +13,16 @@
     <div id="main_container">
         <div id="select_screen">
             <div id="select_container">
-                <input type="button" id="input_1" hidden>
-                <label for="input_1">FIRE</label>
+                <input type="button" id="fire" onclick="selection_input('fire')" hidden>
+                <label for="fire">fire</label>
             </div>
         </div>
         <div id="game_screen">
-            <input type="button" id="add_input" onclick="add_input('WATER')" hidden>
-            <label for="add_input">결합</label>
+            <div id="game_container">
+
+            </div>
+            <input type="button" id="add_input" onclick="add_input('water')" hidden>
+            <label for="add_input">COMBINATION</label>
         </div>
     </div>
 </body>
