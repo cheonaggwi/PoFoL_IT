@@ -10,19 +10,25 @@
     <script src="Magic_combination.js"></script>
 </head>
 <body>
-    <div id="main_container">
-        <div id="select_screen">
-            <div id="select_container">
+    <div id="main_container" class="position_zero">
+        <div id="select_screen" class="position_zero">
+            <div id="select_container" class="position_zero">
                 <input type="button" id="fire" onclick="selection_input('fire')" hidden>
                 <label for="fire">fire</label>
+                <input type="button" id="water" onclick="selection_input('water')" hidden>
+                <label for="water">water</label>
             </div>
         </div>
-        <div id="game_screen">
-            <div id="game_container">
+        <div id="game_screen" class="position_zero">
+            <div id="game_container" class="position_zero">
 
             </div>
             <input type="button" id="add_input" onclick="add_input('water')" hidden>
             <label for="add_input">COMBINATION</label>
+
+            <div>
+
+            </div>
         </div>
     </div>
 </body>
