@@ -14,6 +14,11 @@ const mob_object = {
 
 var click_count = 0 ,magic_count = 0, mob_count = 0
 
+var select_container_z_index = function(z){
+    $('.select_container').css('z-index','0');
+    $('#select_container'+z).css('z-index','1');
+}
+
 var add_input = function(text){
     if(magic_count>1){
         if(magic_list[0].length == 1){
@@ -31,7 +36,7 @@ var add_input = function(text){
             i = selection_list.indexOf(add_magic[0])
             if(i == -1){
                 selection_list.push(add_magic[0])
-                $("#select_container").append('<input type="button" id="'+"'"+add_magic[0]+"'"+'" onclick="selection_input('+"'"+add_magic[0]+"'"+')" hidden><label for="'+"'"+add_magic[0]+"'"+'"><img src="magic_image/'+add_magic[0]+'.png" width="90%" height="90%" >'+add_magic[0]+'</label>')
+                $("#select_container"+magic_count).append('<input type="button" id="'+"'"+add_magic[0]+"'"+'" onclick="selection_input('+"'"+add_magic[0]+"'"+')" hidden><label for="'+"'"+add_magic[0]+"'"+'"><img src="magic_image/'+add_magic[0]+'.png" width="90%" height="90%" >'+add_magic[0]+'</label>')
             }
         }
     }
