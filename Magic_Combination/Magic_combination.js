@@ -19,7 +19,7 @@ var select_container_z_index = function(z){
     $('#select_container'+z).css('z-index','1');
 }
 
-var add_input = function(text){
+var add_input = function(){
     if(magic_count>1){
         if(magic_list[0].length == 1){
             var add_magic = Object.values(magic_recipe[magic_list[0][0]][magic_list[1][0]-1])

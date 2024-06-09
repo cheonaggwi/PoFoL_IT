@@ -11,9 +11,9 @@
 </head>
 <body>
     <div id="main_container" class="position_zero">
-        <input type="button" class="position_zero" name="magic_circle" onclick="select_container_z_index(1)">
-        <input type="button" class="position_zero" name="magic_circle" onclick="select_container_z_index(2)">
-        <input type="button" class="position_zero" name="magic_circle" onclick="select_container_z_index(3)">
+        <input type="radio" id="radio_1" class="position_zero radio" name="magic_circle" onclick="select_container_z_index(1)" checked>
+        <input type="radio" id="radio_2" class="position_zero radio" name="magic_circle" onclick="select_container_z_index(2)">
+        <input type="radio" id="radio_3" class="position_zero radio" name="magic_circle" onclick="select_container_z_index(3)">
         <div id="select_screen" class="position_zero">
             <div id="select_container1" class="select_container position_zero" style="z-index: 1;">
                 <input type="button" id="fire" onclick="selection_input('fire')" hidden>
@@ -30,7 +30,7 @@
             <div id="game_container" class="position_zero">
 
             </div>
-            <input type="button" id="add_input" onclick="add_input('water')" hidden>
+            <input type="button" id="add_input" onclick="add_input()" hidden>
             <label for="add_input">COMBINATION</label>
 
             <div>
