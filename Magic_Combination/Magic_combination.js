@@ -36,7 +36,7 @@ var add_input = function(){
             i = selection_list.indexOf(add_magic[0])
             if(i == -1){
                 selection_list.push(add_magic[0])
-                $("#select_container"+magic_count).append('<input type="button" id="'+"'"+add_magic[0]+"'"+'" onclick="selection_input('+"'"+add_magic[0]+"'"+')" hidden><label for="'+"'"+add_magic[0]+"'"+'"><img src="magic_image/'+add_magic[0]+'.png" width="90%" height="90%" >'+add_magic[0]+'</label>')
+                $("#select_container0 , #select_container"+magic_count).append('<input type="button" id="'+"'"+add_magic[0]+"'"+'" onclick="selection_input('+"'"+add_magic[0]+"'"+')" hidden><label for="'+"'"+add_magic[0]+"'"+'"><img src="magic_image/'+add_magic[0]+'.png" width="90%" height="90%" >'+add_magic[0]+'</label>')
             }
         }
     }
@@ -68,6 +68,8 @@ var remove_input = function(texts,text){
         magic_list[0].splice(i)
         magic_list[1].splice(i)
     }
+
+    console.log(i)
 
     $("#"+texts+"+label").remove();
     $("#"+texts).remove();
