@@ -1,3 +1,9 @@
+*{
+    user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+
 label{
     border: 1px dashed red;
     height: auto;
@@ -67,6 +73,32 @@ label{
     height: 7vh;
     background-color: red;
 }
+
+#imformation_checkbox+label{
+    display: inline-block;
+    position: absolute;
+    width: 5%;
+    height: 5vh;
+    background-color: aqua;
+    transition-duration: 0.5s;
+    z-index: 2;
+}
+
+#imformation_checkbox:checked+label{
+    background-color: red;
+}
+
+#imformation{
+    border: 1px dashed red;
+    height: 10%;
+    width: 10%;
+    position: absolute;
+    display: none;
+    z-index: 3;
+    pointer-events:none;
+}
+
+
 
 /**
 .radio:checked{

@@ -10,6 +10,7 @@
     <script src="Magic_combination.js"></script>
 </head>
 <body class="position_zero">
+    <div id="imformation" class="position_zero">안ㄴ여하세요</div>
     <div id="main_container" class="position_zero">
         <input type="radio" id="radio_0" class="position_zero radio" name="magic_circle" onclick="select_container_z_index(0)" checked hidden>
         <label for="radio_0" style="left: 0px;"><div>ALL</div></label>
@@ -19,18 +20,12 @@
         <label for="radio_2" style="left: 100px;"><div>2star</div></label>
         <input type="radio" id="radio_3" class="position_zero radio" name="magic_circle" onclick="select_container_z_index(3)"hidden>
         <label for="radio_3" style="left: 150px;"><div>3star</div></label>
+        <input type="checkbox" id="imformation_checkbox" class="position_zero" onclick="" hidden>
+        <label for="imformation_checkbox" style="left: 45%;"><div>imformation</div></label>
         <div id="select_screen" class="position_zero">
             <div id="select_container0" class="select_container position_zero" style="z-index: 1;">
-                <input type="button" id="fire" onclick="selection_input('fire')" hidden>
-                <label for="fire"><img src="magic_image/fire.png" width="90%" height="90%">fire</label>
-                <input type="button" id="water" onclick="selection_input('water')" hidden>
-                <label for="water">water</label>
             </div>
             <div id="select_container1" class="select_container position_zero" style="z-index: 0;">
-                <input type="button" id="fire" onclick="selection_input('fire')" hidden>
-                <label for="fire"><img src="magic_image/fire.png" width="90%" height="90%">fire</label>
-                <input type="button" id="water" onclick="selection_input('water')" hidden>
-                <label for="water">water</label>
             </div>
             <div id="select_container2" class="select_container position_zero" style="z-index: 0;">
             </div>

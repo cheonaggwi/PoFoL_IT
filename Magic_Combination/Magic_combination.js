@@ -1,6 +1,8 @@
 var magic_list = [[],[]]
 
-var selection_list = ["fire","water"]
+var selection_list = []
+
+var mouse_position = [0,0]
 
 const magic_recipe = {
     "fire":[["fog"],["flame","recovery"],["unquenchable fire"]],
@@ -35,11 +37,15 @@ var add_input = function(){
         if (add_magic.length == 1){
             i = selection_list.indexOf(add_magic[0])
             if(i == -1){
-                selection_list.push(add_magic[0])
-                $("#select_container0 , #select_container"+magic_count).append('<input type="button" id="'+"'"+add_magic[0]+"'"+'" onclick="selection_input('+"'"+add_magic[0]+"'"+')" hidden><label for="'+"'"+add_magic[0]+"'"+'"><img src="magic_image/'+add_magic[0]+'.png" width="90%" height="90%" >'+add_magic[0]+'</label>')
+                new_magic_add(add_magic[0],magic_count)
             }
         }
     }
+}
+
+var new_magic_add = function(magic,star){
+    selection_list.push(magic)
+    $("#select_container0 , #select_container"+star).append('<input type="button" id="'+"'"+magic+"'"+'" onclick="selection_input('+"'"+magic+"'"+')" class="magic" hidden><label for="'+"'"+magic+"'"+'"><img src="magic_image/'+magic+'.png" width="100%" height="90%" >'+magic+'</label>')
 }
 
 var selection_input = function(text){
@@ -57,7 +63,7 @@ var selection_input = function(text){
         click_count++
         magic_count++
 
-        $("#game_container").append('<input type="button" id="'+click_count+'" onclick="remove_input('+"'"+click_count+"'"+','+"'"+text+"'"+')" hidden><label for="'+click_count+'"><img src="magic_image/'+text+'.png" width="90%" height="90%" >'+text+'</label>');
+        $("#game_container").append('<input type="button" id="'+click_count+'" onclick="remove_input('+"'"+click_count+"'"+','+"'"+text+"'"+')" hidden><label for="'+click_count+'"><img src="magic_image/'+text+'.png" width="100%" height="90%" >'+text+'</label>');
     }
 }
 
@@ -69,9 +75,33 @@ var remove_input = function(texts,text){
         magic_list[1].splice(i,1)
     }
 
-    console.log(i)
-
     $("#"+texts+"+label").remove();
     $("#"+texts).remove();
     magic_count--
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    new_magic_add("fire",1)
+    new_magic_add("water",1)
+  });
+
+$(document).on('mouseenter','.magic+label', function() {
+    if ($('#imformation_checkbox').is(':checked')) {
+        $(this).css('background-color', 'yellow');
+        $("#imformation").css('display', 'none');
+    }
+
+}).on('mouseleave','.magic+label', function() {
+    $(this).css('background-color', '');
+    $("#imformation").css('display', 'none');
+
+}).on('mousemove', '.magic+label', function(event) {
+    if ($('#imformation_checkbox').is(':checked')) {
+        $("#imformation").css('display', 'inline-block');
+        $("#imformation").css('left', event.clientX);
+        $("#imformation").css('top', event.clientY);
+    }
+
+});
+
+
