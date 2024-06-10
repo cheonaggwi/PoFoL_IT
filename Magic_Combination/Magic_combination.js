@@ -65,8 +65,8 @@ var remove_input = function(texts,text){
     i = magic_list[0].indexOf(text)
     magic_list[1][i]--;
     if(magic_list[1][i] == 0){
-        magic_list[0].splice(i)
-        magic_list[1].splice(i)
+        magic_list[0].splice(i,1)
+        magic_list[1].splice(i,1)
     }
 
     $("#"+texts+"+label").remove();
