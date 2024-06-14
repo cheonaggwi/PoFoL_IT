@@ -54,7 +54,7 @@ var new_magic_add = function(magic,star){
     selection_list[0].push(magic)
     selection_list[1].push(Number(star))
     imformation_object[magic] = [""+star,(""+magic_list[0]).split(","),(""+magic_list[1]).split(",")]
-    $("#select_container0 , #select_container"+star).append('<input type="button" id="'+"'"+magic+"'"+'" onclick="selection_input('+"'"+magic+"'"+')" class="magic" hidden><label for="'+"'"+magic+"'"+'" ><img src="magic_image/'+magic+'.png" width="100%" height="90%" >'+magic+'</label>')
+    $("#select_container0 , #select_container"+star).append('<input type="button" id="'+"'"+magic+"'"+'" onclick="selection_input('+"'"+magic+"'"+')" class="magic" hidden><label for="'+"'"+magic+"'"+'" ><img src="magic_image/'+magic+'.png" width="80%" height="80%" ><br>'+magic+'</label>')
 }
 
 var selection_input = function(text){
