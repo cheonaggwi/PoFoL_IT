@@ -53,7 +53,7 @@ body{
     height: 90%;
     background-color: white;
     text-align: center;
-    align-items: center
+    align-items: center;
 }
 
 #game_container{
@@ -77,7 +77,7 @@ body{
 .radio+label{
     display: inline-block;
     position: absolute;
-    width: 80px;
+    width: 70px;
     height: 5vh;
     background-color: aqua;
     transition-duration: 0.5s;
@@ -92,7 +92,7 @@ body{
 #imformation_checkbox+label{
     display: inline-block;
     position: absolute;
-    width: 5%;
+    width: 7%;
     height: 5vh;
     background-color: aqua;
     transition-duration: 0.5s;
@@ -113,9 +113,54 @@ body{
     pointer-events:none;
 }
 
-
-
-/**
-.radio:checked{
+#log{
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: fixed;
+    z-index: 3;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
 }
-*/
+
+#log > *{
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#log > img{
+    top: 22%;
+    left: 50%;
+    height: 30%;
+}
+
+#log > div{
+    top: 45%;
+    left: 50%;
+}
+
+#log > label{
+    top: 85%;
+    left: 50%;
+    height: 7vh;
+    width: 20vw;
+    background-color: white;
+}
+
+#log > label > div{
+    text-align: center;
+    transform: translate(0%, 60%);
+}
+
+@keyframes opacity_zero {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
