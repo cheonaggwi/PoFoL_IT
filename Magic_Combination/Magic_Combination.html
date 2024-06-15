@@ -10,18 +10,34 @@
     <script src="Magic_combination.js"></script>
 </head>
 <body class="position_zero">
-
-    <div id="log">
-        <img src="magic.png">
-        <div>
-            
-        </div>
-        <input type="button" id="next" onclick="$('#log').css('animation-name','opacity_zero')" hidden>
-        <label for="next">
+    <div id="start_option">
+        <div id="LEFT">
+            <img src="magic.png">
             <div>
-                NEXT
+                시작하려면 버튼을 누르세요!
             </div>
-        </label>
+            <input type="button" id="next_LEFT" onclick="$('#LEFT').css('animation-name','LEFT'); $('#RIGHT').css('animation-name','RIGHT'); $('#MID').css('animation-name','MID'); $('#LEFT>span').css('animation-name','shine_LEFT'); $('#RIGHT>span').css('animation-name','shine_RIGHT');" hidden>
+            <label for="next_LEFT">
+                <div>
+                    NEXT
+                </div>
+            </label>
+            <span></span>
+        </div>
+        <div id="RIGHT">
+            <img src="magic.png">
+            <div>
+                시작하려면 버튼을 누르세요!
+            </div>
+            <input type="button" id="next_RIGHT" onclick="$('#LEFT').css('animation-name','LEFT'); $('#RIGHT').css('animation-name','RIGHT'); $('#MID').css('animation-name','MID'); $('#LEFT>span').css('animation-name','shine_LEFT'); $('#RIGHT>span').css('animation-name','shine_RIGHT');" hidden>
+            <label for="next_RIGHT">
+                <div>
+                    NEXT
+                </div>
+            </label>
+            <span></span>
+        </div>
+        <div id="MID"></div>
     </div>
 
     <div id="imformation" class="position_zero">
