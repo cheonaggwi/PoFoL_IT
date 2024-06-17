@@ -72,7 +72,7 @@ var selection_input = function(text){
         click_count++
         magic_count++
 
-        $("#game_container").append('<input type="button" id="'+click_count+'" onclick="remove_input('+"'"+click_count+"'"+','+"'"+text+"'"+')" hidden><label for="'+click_count+'"><img src="magic_image/'+text+'.png" width="100%" height="90%" >'+text+'</label>');
+        $("#magic_container").append('<input type="button" id="'+click_count+'" onclick="remove_input('+"'"+click_count+"'"+','+"'"+text+"'"+')" hidden><label for="'+click_count+'"><img src="magic_image/'+text+'.png" width="100%" height="90%" >'+text+'</label>');
     }
 }
 

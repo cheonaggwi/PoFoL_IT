@@ -10,7 +10,7 @@
     <script src="Magic_combination.js"></script>
 </head>
 <body class="position_zero">
-    <div id="start_option">
+    <!-- <div id="start_option">
         <div id="LEFT">
             <img src="magic.png">
             <div>
@@ -38,7 +38,7 @@
             <span></span>
         </div>
         <div id="start_light"></div>
-    </div>
+    </div> -->
 
     <div id="imformation" class="position_zero">
         <div id="imformation_detail"></div>
@@ -60,7 +60,7 @@
         <label for="radio_5" style="left: 425px;"><div>LAST</div></label>
 
         <input type="checkbox" id="imformation_checkbox" class="position_zero" onclick="" hidden>
-        <label for="imformation_checkbox" style="left: 43%;"><div>imformation</div></label>
+        <label for="imformation_checkbox" style="left: 93%;"><div>imformation</div></label>
 
         <div id="select_screen" class="position_zero">
             <div id="select_container0" class="select_container position_zero" style="display: grid;">
@@ -78,12 +78,19 @@
         </div>
 
         <div id="game_screen" class="position_zero">
-            <div id="game_container" class="position_zero">
-
+            <div id="magic_container" class="position_zero">
             </div>
+
             <input type="button" id="add_input" onclick="add_input()" hidden>
             <label for="add_input">COMBINATION</label>
+            <input type="button" id="add_input" onclick="attack()" hidden>
+            <label for="add_input">ATTACK</label>
+            <input type="button" id="add_input" onclick="FOLD()" hidden>
+            <label for="add_input">FOLD</label>
 
+            <div id="mob_container" class="position_zero">
+                text
+            </div>
         </div>
     </div>
 </body>

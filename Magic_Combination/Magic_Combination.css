@@ -40,6 +40,7 @@ body{
     position: fixed;
     border: 1px dashed red;
     left: 50%;
+    top: 5%;
     width: 50%;
 }
 
@@ -56,7 +57,16 @@ body{
     align-items: center;
 }
 
-#game_container{
+#magic_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+    grid-auto-rows: 100%;
+    width: 100%;
+    height: 35%;
+}
+
+#mob_container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-flow: row;
@@ -81,7 +91,6 @@ body{
     height: 5vh;
     background-color: aqua;
     transition-duration: 0.5s;
-    z-index: 2;
 }
 
 .radio:checked+label{
@@ -96,7 +105,6 @@ body{
     height: 5vh;
     background-color: aqua;
     transition-duration: 0.5s;
-    z-index: 2;
 }
 
 #imformation_checkbox:checked+label{
